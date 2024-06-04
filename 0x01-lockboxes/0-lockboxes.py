@@ -4,8 +4,6 @@
 
 def canUnlockAll(boxes):
     """function to solve lockboxes issue"""
-    if boxes[0] == []:
-        return False
     openBoxes = [0]
     for key in boxes[0]:
         if key >= len(boxes):
