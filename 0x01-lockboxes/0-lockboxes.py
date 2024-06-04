@@ -6,7 +6,7 @@ def canUnlockAll(boxes):
     """function to solve lockboxes issue"""
     openBoxes = [0]
     for key in boxes[0]:
-        if key >= len(boxes):
+        if key >= len(boxes) or key in openBoxes:
             continue
         else:
             openBoxes.append(key)
