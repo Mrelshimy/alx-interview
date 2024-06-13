@@ -5,17 +5,17 @@
 def minoperations(n: int) -> int:
     """ Function for Min operations """
 
-    if n <= 1 or not isinstance(n, int):
+    if n <= 1:
         return 0
-    ops = 2
-    printed = [1, 2]
-    copied = [1]
-    while printed[-1] < n:
-        if (n - printed[-1]) % printed[-1] == 0:
-            ops += 2
-            printed.append(printed[-1] * 2)
+
+    i = 2
+    operations = 0
+
+    while i <= n:
+        if n % i == 0:
+            n = n / i
+            operations += i
         else:
-            ops += 1
-            printed.append(printed[-1] + copied[-1])
-        copied.append(printed[-1] - printed[-2])
-    return ops
+            i += 1
+
+    return operations
