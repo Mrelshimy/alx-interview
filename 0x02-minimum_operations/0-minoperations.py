@@ -2,7 +2,7 @@
 """ Minimum operations Module"""
 
 
-def minoperations(n: int) -> int:
+def minOperations(n: int) -> int:
     """ Function for Min operations """
 
     if n <= 1 or not isinstance(n, int):
