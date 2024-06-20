@@ -19,7 +19,7 @@ line_count = 0
 try:
     for line in sys.stdin:
         line_split = line.split()
-        if len(line_split) > 2:
+        if len(line_split) > 4:
             code = line_split[-2]
             file_size = int(line_split[-1])
             if code in status_codes.keys():
